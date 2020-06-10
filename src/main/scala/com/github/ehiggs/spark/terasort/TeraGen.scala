@@ -92,6 +92,8 @@ object TeraGen {
     dataset.saveAsNewAPIHadoopFile[TeraOutputFormat](outputFile)
 
     println("Number of records written: " + dataset.count())
+
+    sc.stop()
   }
 
   def sizeStrToBytes(str: String): Long = {
